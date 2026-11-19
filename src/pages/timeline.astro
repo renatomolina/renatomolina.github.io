@@ -1,12 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const kinds = {
-  role: { label: 'Role', beacon: '', icon: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' },
-  project: { label: 'Project', beacon: 'beacon-green', icon: '<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>' },
-  award: { label: 'Award', beacon: 'beacon-gold', icon: '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>' },
-  education: { label: 'Education', beacon: 'beacon-purple', icon: '<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>' },
-};
+const kinds = { role: 'Role', project: 'Project', award: 'Award', education: 'Education' };
 
 type Entry = {
   kind: keyof typeof kinds;
@@ -20,76 +15,76 @@ type Entry = {
 
 const entries: Entry[] = [
   {
-    kind: 'role', time: '2025 - Present', title: 'Chief Technology Officer', org: 'Skillsetter · Vancouver, BC',
-    text: 'Setting technical vision and scaling the engineering team. Owning SOC 2 compliance and GDPR adherence. Driving AI strategy and product direction across the platform.',
+    kind: 'role', time: '2025 – Present', title: 'Chief Technology Officer', org: 'Skillsetter, Vancouver, BC',
+    text: "Set the technical vision and lead the engineering team day to day as its team lead. Work with product to define the technical side and help shape what we build. Own SOC 2 and GDPR compliance, drive AI strategy, and support every other department on anything technical.",
     url: 'https://skillsetter.com', linkLabel: 'skillsetter.com',
   },
   {
-    kind: 'role', time: '2024 - 2025', title: 'Principal Software Engineer & Team Lead', org: 'Skillsetter · Vancouver, BC',
-    text: 'Led the technical strategy and development of the core application. Architected web applications and RESTful APIs in Ruby on Rails. Engineered AI capabilities integrating OpenAI, AWS Bedrock, Google Gemini, and ElevenLabs. Implemented real-time video with WebRTC and LMS integrations (Blackboard, Canvas). Managed cloud infrastructure on AWS (EC2, RDS, SNS, Docker).',
+    kind: 'role', time: '2024 – 2025', title: 'Principal Software Engineer & Team Lead', org: 'Skillsetter, Vancouver, BC',
+    text: "Led technical strategy and development of the core Ruby on Rails application and its APIs. Built AI features on OpenAI, AWS Bedrock, Google Gemini and ElevenLabs, real-time video with WebRTC, and LMS integrations with Blackboard and Canvas. Ran the AWS infrastructure.",
     url: 'https://skillsetter.com', linkLabel: 'skillsetter.com',
   },
   {
-    kind: 'role', time: '2016 - 2024', title: 'Senior Software Engineer', org: 'Skillsetter · Vancouver, BC',
-    text: 'Built the platform from the ground up. Full-stack development in Ruby on Rails, scaling architecture on AWS, and establishing engineering practices that grew with the company.',
+    kind: 'role', time: '2016 – 2024', title: 'Senior Software Engineer', org: 'Skillsetter, Vancouver, BC',
+    text: "Built the platform from the ground up: full-stack Ruby on Rails, an AWS architecture that scaled, and engineering practices that grew with the company.",
     url: 'https://skillsetter.com', linkLabel: 'skillsetter.com',
   },
   {
-    kind: 'role', time: '2016 - 2018', title: 'Senior Software Engineer', org: 'Noomii · Vancouver, BC',
-    text: 'Developed and maintained a cloud-based coaching marketplace in Ruby on Rails. Designed scalable architecture on AWS, integrated third-party services (Intercom, Stripe), and migrated the platform from Ruby 1.9 to 2.4. Applied reverse engineering techniques to document legacy systems.',
+    kind: 'role', time: '2016 – 2018', title: 'Senior Software Engineer', org: 'Noomii, Vancouver, BC',
+    text: "Built and maintained a coaching marketplace in Ruby on Rails on AWS. Integrated Intercom and Stripe, upgraded the platform from Ruby 1.9 to 2.4, and documented legacy systems by reverse engineering them.",
     url: 'https://www.noomii.com', linkLabel: 'noomii.com',
   },
   {
-    kind: 'role', time: '2014 - 2015', title: 'Tech Lead Software Engineer', org: 'Inspira Tecnologia · São Paulo, Brazil',
-    text: 'Led Android and Ruby teams across multiple web and mobile projects. Served as Scrum Master, designed APIs and mobile apps (Android SDK, PhoneGap), and consulted for startups on technical and business strategy. Acted as an innovation agent applying UX techniques.',
+    kind: 'role', time: '2014 – 2015', title: 'Tech Lead Software Engineer', org: 'Inspira Tecnologia, São Paulo, Brazil',
+    text: "Led Android and Ruby teams across web and mobile projects as tech lead and Scrum Master. Designed APIs and mobile apps, and advised startups on technical and business strategy.",
     url: 'https://www.inspira.com.br/', linkLabel: 'inspira.com.br',
   },
   {
-    kind: 'role', time: '2013 - 2014', title: 'Chief Technology Officer', org: 'Jazz · São Paulo, Brazil',
-    text: "Managed and led projects with a multidisciplinary team. Designed an innovation process for different business contexts, from understanding user needs through UX research to choosing architecture, process, and technology. Mentored developers in the Android Jam Program and designed the company's career plan for technology, design, and management.",
+    kind: 'role', time: '2013 – 2014', title: 'Chief Technology Officer', org: 'Jazz, São Paulo, Brazil',
+    text: "Led projects with a multidisciplinary team and designed the company's innovation process, from UX research to architecture and technology choices. Mentored developers in the Android Jam Program and created the career plan for technology, design and management.",
   },
   {
-    kind: 'role', time: '2013', title: 'Chief Technology Officer & Co-founder', org: 'Doog™ · Brazil',
-    text: "Co-founded a B2B startup focused on geolocation and tracking salesforce and products. Led technology decisions, product design, and the development team. Built mobile apps (Android SDK, PhoneGap) and backend APIs in Ruby on Rails. Managed investor relations and served as board member. Applied lean and agile principles to the company's internal processes.",
+    kind: 'role', time: '2013', title: 'Chief Technology Officer & Co-founder', org: 'Doog™, Brazil',
+    text: "Co-founded a B2B startup for geolocation tracking of sales teams and products. Led technology, product design and the development team, building Android apps and a Ruby on Rails backend. Handled investor relations and sat on the board.",
   },
   {
-    kind: 'role', time: '2012 - 2013', title: 'Software Engineer Consultant', org: 'Brasil RFID / Inovacode Solutions · São Paulo, Brazil',
-    text: 'Developed an RFID system with Android app and Ruby on Rails backend. Conducted technological feasibility studies, migrated a legacy system to a new architecture, and designed the integration API.',
+    kind: 'role', time: '2012 – 2013', title: 'Software Engineer Consultant', org: 'Brasil RFID / Inovacode Solutions, São Paulo, Brazil',
+    text: "Built an RFID system with an Android app and a Ruby on Rails backend. Ran feasibility studies, migrated a legacy system to a new architecture, and designed the integration API.",
     url: 'https://www.inovacode.com.br/', linkLabel: 'inovacode.com.br',
   },
   {
     kind: 'award', time: '2012', title: 'Interaction South America', org: 'IxDA / Agência Click',
-    text: '2nd place in Best Mobile Applications, Innovation and Usability category. Recognized across Latin America.',
+    text: "Second place in Best Mobile Applications, Innovation and Usability category. Recognized across Latin America.",
     url: 'https://ixda.org/initiatives/interaction-latin-america/', linkLabel: 'ixda.org',
   },
   {
-    kind: 'project', time: '2011', title: 'Inverse Maxi', org: 'CESAR · Shipped product',
-    text: 'One of the first smart fridges in the Brazilian market. Developed the Android OS customization and the integration layer between the embedded system and the refrigerator API, enabling a tablet component to control the fridge. Full lifecycle from prototype to mass production.',
-    url: 'https://www.youtube.com/watch?v=G34Dra2v85c', linkLabel: 'Watch demo',
+    kind: 'project', time: '2011', title: 'Inverse Maxi', org: 'CESAR, shipped product',
+    text: "One of the first smart fridges in Brazil. Customized Android OS and built the layer that lets the built-in tablet control the fridge, from prototype through mass production.",
+    url: 'https://www.youtube.com/watch?v=G34Dra2v85c', linkLabel: 'Watch the demo',
   },
   {
-    kind: 'project', time: '2011', title: 'Positivo Ypy', org: 'CESAR · Shipped product',
-    text: "Android OS customization and applications for one of Brazil's first consumer tablets. Deep system-level work on the platform. Reached hundreds of thousands of users.",
+    kind: 'project', time: '2011', title: 'Positivo Ypy', org: 'CESAR, shipped product',
+    text: "Customized Android OS and built apps for one of Brazil's first consumer tablets, used by hundreds of thousands of people.",
     url: 'https://www.positivotecnologia.com.br', linkLabel: 'positivotecnologia.com.br',
   },
   {
-    kind: 'role', time: '2011 - 2013', title: 'Systems Engineer', org: 'CESAR · Sorocaba, Brazil',
-    text: 'Developed systems focused on innovation in mobile, embedded systems, web, and interactive TV. Built product backlogs with product owners, applied UX research (focus groups, interviews, prototyping), and led Android OS customizations for specific product contexts.',
+    kind: 'role', time: '2011 – 2013', title: 'Systems Engineer', org: 'CESAR, Sorocaba, Brazil',
+    text: "Built mobile, embedded, web and interactive TV systems. Shaped backlogs with product owners, ran UX research (focus groups, interviews, prototyping), and led Android OS customizations for specific products.",
     url: 'https://www.cesar.org.br', linkLabel: 'cesar.org.br',
   },
   {
-    kind: 'education', time: '2011 - 2012', title: 'M.Sc. Computer Science (incomplete)', org: 'Universidade Federal de São Carlos (UFSCar)',
-    text: 'Compilers and programming languages research. Investigated macro systems in Cyan for domain-specific language generation.',
+    kind: 'education', time: '2011 – 2012', title: 'M.Sc. Computer Science (incomplete)', org: 'Universidade Federal de São Carlos (UFSCar)',
+    text: "Research on compilers and programming languages, focused on macro systems in Cyan for generating domain-specific languages.",
     url: 'https://cyan-lang.org/', linkLabel: 'cyan-lang.org',
   },
   {
-    kind: 'education', time: '2008 - 2011', title: 'B.Sc. Computer Science', org: 'Universidade Federal de São Carlos (UFSCar)',
-    text: 'Research on compilers and OLAP systems. Co-founded and organized SeCoT, a tech conference that brought global speakers to campus across three editions.',
+    kind: 'education', time: '2008 – 2011', title: 'B.Sc. Computer Science', org: 'Universidade Federal de São Carlos (UFSCar)',
+    text: "Research on compilers and OLAP systems. Co-founded and organized SeCoT, a tech conference that brought international speakers to campus for three editions.",
     url: 'https://www.ufscar.br', linkLabel: 'ufscar.br',
   },
   {
     kind: 'education', time: '2006', title: 'Tech Instructor', org: 'Microlins Franchising',
-    text: 'Taught courses on computer architecture, programming languages (PHP, JavaScript), and frontend development (HTML, CSS).',
+    text: "Taught computer architecture, programming (PHP, JavaScript) and frontend development (HTML, CSS).",
   },
 ];
 ---
@@ -97,307 +92,108 @@ const entries: Entry[] = [
 <Base title="Journey — Renato Molina Toth" description="Career timeline and projects.">
   <header>
     <h1>Journey</h1>
+    <p class="lede">Roles, shipped products and studies, newest first.</p>
   </header>
 
-  <section class="timeline">
-    <div class="tl-track">
-      <div class="tl-track-progress" id="track-progress"></div>
-    </div>
-
-    {entries.map((e) => {
-      const k = kinds[e.kind];
-      return (
-        <article class="tl-entry">
-          <div class:list={['tl-beacon', k.beacon]}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" set:html={k.icon} />
-          </div>
+  <ol>
+    {entries.map((e) => (
+      <li>
+        <div class="when">
           <time>{e.time}</time>
-          <div class:list={['tl-card', { 'card-award': e.kind === 'award' }]}>
-            <span class:list={['tl-badge', e.kind]}>{k.label}</span>
-            <h2>{e.title}</h2>
-            <p class="tl-org">{e.org}</p>
-            <p>{e.text}</p>
-            {e.url && <a href={e.url} target="_blank" class="tl-link">{e.linkLabel} →</a>}
-          </div>
-        </article>
-      );
-    })}
-  </section>
+          <span>{kinds[e.kind]}</span>
+        </div>
+        <div class="what">
+          <h2>{e.title}</h2>
+          <p class="org">{e.org}</p>
+          <p class="desc">{e.text}</p>
+          {e.url && <a href={e.url} target="_blank" rel="noopener">{e.linkLabel}</a>}
+        </div>
+      </li>
+    ))}
+  </ol>
 </Base>
 
-<style is:global>
-  .bg-glow-1 {
-    width: 800px;
-    height: 800px;
-    top: -200px;
-    right: -300px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
+<style>
+  .lede {
+    margin-top: 1.5rem;
+    font-family: var(--display);
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
   }
 
-  .bg-glow-2 {
-    width: 600px;
-    height: 600px;
-    bottom: 20%;
-    left: -200px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.04) 0%, transparent 70%);
+  ol {
+    list-style: none;
+    margin-top: clamp(2.5rem, 6vw, 4rem);
   }
 
-  h1 {
-    font-size: clamp(2.2rem, 5vw, 3rem);
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
-    background: linear-gradient(135deg, var(--text) 0%, var(--text-secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  li {
+    display: grid;
+    grid-template-columns: 13rem minmax(0, 62ch);
+    gap: 0 3rem;
+    padding: 2.25rem 0;
+    border-top: 1px solid var(--rule);
   }
 
-  /* Timeline track */
-  .timeline {
-    position: relative;
-    padding: 80px 0 40px 52px;
+  .when {
+    font-family: var(--display);
+    line-height: 1.3;
   }
 
-  .tl-track {
-    position: absolute;
-    left: 11px;
-    top: 80px;
-    bottom: 40px;
-    width: 2px;
-    background: var(--border);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-
-  .tl-track-progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background: linear-gradient(to bottom, var(--accent), var(--purple));
-    border-radius: 2px;
-    transition: height 0.1s linear;
-  }
-
-  /* Entry: hidden until revealed, but only when JS runs and motion is allowed */
-  .tl-entry {
-    position: relative;
-    margin-bottom: 56px;
-  }
-
-  .tl-entry:last-child { margin-bottom: 0; }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .js .tl-entry {
-      opacity: 0;
-      transform: translateY(60px) scale(0.97);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .js .tl-entry.in-view {
-      opacity: 1;
-      transform: none;
-    }
-  }
-
-  /* Beacon */
-  .tl-beacon {
-    position: absolute;
-    left: -52px;
-    top: 24px;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg);
-    border-radius: 50%;
-    border: 2px solid var(--border);
-    color: var(--accent);
-    transition: all 0.4s;
-    z-index: 2;
-  }
-
-  .tl-beacon svg {
-    width: 14px;
-    height: 14px;
-  }
-
-  .tl-entry.in-view .tl-beacon {
-    border-color: var(--accent);
-    box-shadow: 0 0 16px var(--accent-glow);
-  }
-
-  .beacon-green { color: var(--green); }
-  .tl-entry.in-view .beacon-green {
-    border-color: var(--green);
-    box-shadow: 0 0 16px rgba(16, 185, 129, 0.15);
-  }
-
-  .beacon-gold { color: var(--gold); }
-  .tl-entry.in-view .beacon-gold {
-    border-color: var(--gold);
-    box-shadow: 0 0 16px rgba(245, 158, 11, 0.15);
-  }
-
-  .beacon-purple { color: var(--purple); }
-  .tl-entry.in-view .beacon-purple {
-    border-color: var(--purple);
-    box-shadow: 0 0 16px rgba(168, 85, 247, 0.15);
-  }
-
-  /* Time label */
   time {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-muted);
-    letter-spacing: 0.06em;
     display: block;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-  }
-
-  /* Card */
-  .tl-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 28px 28px 24px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .tl-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
-  }
-
-  .tl-card:hover {
-    border-color: var(--border-hover);
-    background: var(--surface-2);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.5),
-                0 0 0 1px var(--border-hover);
-  }
-
-  .card-award {
-    border-color: rgba(245, 158, 11, 0.2);
-    background: linear-gradient(160deg, rgba(245, 158, 11, 0.03) 0%, var(--surface) 40%);
-  }
-
-  .card-award:hover {
-    border-color: rgba(245, 158, 11, 0.35);
-  }
-
-  .tl-card h2 {
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    letter-spacing: -0.015em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .when span {
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-weight: 650;
+    line-height: 1.2;
     letter-spacing: -0.02em;
-    margin-bottom: 4px;
   }
 
-  .tl-org {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 14px;
+  .org {
+    margin-top: 0.25rem;
+    font-family: var(--display);
+    font-size: 1rem;
+    color: var(--muted);
   }
 
-  .tl-card p:last-of-type {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
+  .desc {
+    margin-top: 0.9rem;
+    font-size: 1.0625rem;
   }
 
-  .tl-link {
+  .what a {
     display: inline-block;
-    margin-top: 14px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--accent-light);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
+    margin-top: 0.75rem;
+    font-family: var(--display);
+    font-size: 0.95rem;
   }
 
-  .tl-link:hover { border-bottom-color: var(--accent-light); }
+  @media (max-width: 52rem) {
+    li {
+      grid-template-columns: minmax(0, 1fr);
+      padding: 1.75rem 0;
+    }
 
-  /* Badges */
-  .tl-badge {
-    display: inline-block;
-    margin-bottom: 14px;
-    padding: 4px 10px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-radius: 6px;
-  }
+    .when {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
 
-  .tl-badge.role {
-    background: rgba(99, 102, 241, 0.08);
-    color: var(--accent-light);
-    border: 1px solid rgba(99, 102, 241, 0.15);
-  }
-
-  .tl-badge.project {
-    background: rgba(16, 185, 129, 0.08);
-    color: #34d399;
-    border: 1px solid rgba(16, 185, 129, 0.15);
-  }
-
-  .tl-badge.award {
-    background: rgba(245, 158, 11, 0.08);
-    color: #fbbf24;
-    border: 1px solid rgba(245, 158, 11, 0.15);
-  }
-
-  .tl-badge.education {
-    background: rgba(168, 85, 247, 0.08);
-    color: #c084fc;
-    border: 1px solid rgba(168, 85, 247, 0.15);
-  }
-
-  @media (max-width: 600px) {
-    .timeline { padding-left: 40px; }
-    .tl-beacon { left: -40px; }
-    .tl-card { padding: 22px 20px 20px; border-radius: 12px; }
+    time { font-size: 1.1rem; }
   }
 </style>
-
-<script>
-  const entries = document.querySelectorAll('.tl-entry');
-  const track = document.getElementById('track-progress')!;
-  const timeline = document.querySelector<HTMLElement>('.timeline')!;
-
-  const observer = new IntersectionObserver((items) => {
-    items.forEach((item, i) => {
-      if (item.isIntersecting) {
-        setTimeout(() => item.target.classList.add('in-view'), i * 60);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
-
-  entries.forEach((el) => observer.observe(el));
-
-  let raf: number | null = null;
-  window.addEventListener('scroll', () => {
-    if (raf) return;
-    raf = requestAnimationFrame(() => {
-      const rect = timeline.getBoundingClientRect();
-      const scrolled = Math.min(Math.max(-rect.top / (timeline.offsetHeight - window.innerHeight), 0), 1);
-      track.style.height = `${scrolled * 100}%`;
-      raf = null;
-    });
-  }, { passive: true });
-</script>
